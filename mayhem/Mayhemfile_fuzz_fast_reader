@@ -1,0 +1,9 @@
+project: savantenvs/kraken2
+target: fuzz_fast_reader
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_fast_reader/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_fast_reader
+    libfuzzer: true
+    timeout: 30

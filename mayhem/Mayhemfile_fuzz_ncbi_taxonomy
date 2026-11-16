@@ -1,0 +1,9 @@
+project: savantenvs/kraken2
+target: fuzz_ncbi_taxonomy
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_ncbi_taxonomy/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_ncbi_taxonomy @@
+    afl: true
+    timeout: 30

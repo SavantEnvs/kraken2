@@ -1,0 +1,11 @@
+# Local build outputs only (all gitignored and recreated by mayhem/build.sh). .git stays in the
+# context on purpose: the image must hold the mayhem branch history.
+mayhem/.build
+mayhem/.oracle
+**/*.o
+/fuzz_fast_reader
+/fuzz_fast_reader-standalone
+/fuzz_ncbi_taxonomy
+/fuzz_taxonomy_k2d
+/fuzz_compact_hash
+/ctrf-report.json

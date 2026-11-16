@@ -1,0 +1,9 @@
+project: savantenvs/kraken2
+target: fuzz_taxonomy_k2d
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_taxonomy_k2d/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_taxonomy_k2d @@
+    afl: true
+    timeout: 30

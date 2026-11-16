@@ -1,0 +1,9 @@
+project: savantenvs/kraken2
+target: fuzz_compact_hash
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_compact_hash/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_compact_hash @@
+    afl: true
+    timeout: 30
